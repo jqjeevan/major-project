@@ -1,12 +1,12 @@
 # Proposal
-Here is where I describe what I'm going to build.
+Planning on making a variation of Angry birds or any game with gravity
 
 ## Needs To Have
-- First Thing
-- Second Thing
-- Third Thing
+- Functioning gravity
+- Functions/different js files for each part, having thir own class so it can be used across the files
+- A final target/ objective to the game
 
 ## Nice To Have
-- More Stuff
-- Other Things
-- Etc
+- Add different masses to the objects
+- Add different levels
+- Have special powers (adding speed, mass, explosion ablility)

@@ -1,6 +1,6 @@
 # Proposal
 
-Planning on making a variation of Angry birds or any game with gravity, and an object to attack
+ Making a clone/copy of Angry birds, and an object to attack as the final goal to win
 
 ## Needs To Have
 
@@ -15,5 +15,5 @@ Planning on making a variation of Angry birds or any game with gravity, and an o
 - Add different masses to the objects
 - Add different levels
 - Have special powers (adding speed, mass, explosion ablility)
-- Additional Levels
 - Have glass and have it shatter
+- Create different materials, birds and different backgrounds

@@ -14,8 +14,10 @@ class Box {
     translate(pos.x, pos.y);
     rotate(angle);
     fill(255);
-    rectMode(CENTER);
-    rect(0, 0, this.w, this.h);
+    // rectMode(CENTER);
+    // rect(0, 0, this.w, this.h);
+    imageMode(CENTER);
+    image(boxImage, 0, 0, this.w, this.h);
     pop();
   }
 }

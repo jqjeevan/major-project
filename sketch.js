@@ -3,6 +3,16 @@ let box;
 let bird;
 let world, engine;
 
+let birdImage;
+let boxImage;
+let backgroundImage;
+
+function preload() {
+  backgroundImage = loadImage('assets/bg.jpg');
+  birdImage = loadImage('assets/bird.png');
+  boxImage = loadImage('assets/boxy.png');
+}
+
 function setup() {
   createCanvas(600, 400);
   engine = Matter.Engine.create();

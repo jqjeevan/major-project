@@ -13,7 +13,9 @@ class Bird {
     translate(pos.x, pos.y);
     rotate(angle);
     fill(255);
-    circle(0, 0, this.r*2, this.r*2);
+    // circle(0, 0, this.r*2, this.r*2);
+    imageMode(CENTER);
+    image(birdImage, 0, 0, this.r * 2, this.r * 2);
     pop();
   }
 }

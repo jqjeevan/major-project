@@ -4,7 +4,7 @@
 
 ## Needs To Have
 
-- Functioning gravity
+~- Functioning gravity~
 - Functions/different js files for each part, having thir own class so it can be used across the files
 - A final target/ objective to the game
 - An ending screen

@@ -13,15 +13,17 @@ class Glass {
   }
 
   show() {
-    const pos = this.body.position;
-    const angle = this.body.angle;
-    push();
-    translate(pos.x, pos.y);
-    rotate(angle);
-    fill(255);
-    rectMode(CENTER);
-    imageMode(CENTER);
-    image(glassImage, 0, 0, this.w, this.h);
-    pop();
+    if (pigAlive) {
+      const pos = this.body.position;
+      const angle = this.body.angle;
+      push();
+      translate(pos.x, pos.y);
+      rotate(angle);
+      fill(255);
+      rectMode(CENTER);
+      imageMode(CENTER);
+      image(glassImage, 0, 0, this.w, this.h);
+      pop();
+    }
   }
 }

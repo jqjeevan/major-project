@@ -11,13 +11,15 @@ class Bird {
   }
 
   show() {
-    const pos = this.body.position;
-    const angle = this.body.angle;
-    push();
-    translate(pos.x, pos.y);
-    rotate(angle);
-    imageMode(CENTER);
-    image(birdImage, 0, 0, this.r * 2, this.r * 2);
-    pop();
+    if (pigAlive) {
+      const pos = this.body.position;
+      const angle = this.body.angle;
+      push();
+      translate(pos.x, pos.y);
+      rotate(angle);
+      imageMode(CENTER);
+      image(birdImage, 0, 0, this.r * 2, this.r * 2);
+      pop();
+    }
   }
 }

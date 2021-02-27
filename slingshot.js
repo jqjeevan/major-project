@@ -14,9 +14,9 @@ class SlingShot {
   }
 
   fly() {
-    // if (mouseX<=215 && mouseX>=186 && mouseY<=534  && mouseY>=568){
-    this.sling.bodyB = null;
-    // }
+    if (mouseX<=145 && mouseY>=345 && mouseY<=620){
+      this.sling.bodyB = null;
+    }
   }
 
   show() {

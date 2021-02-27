@@ -15,6 +15,7 @@ let backgroundImage;
 let slingshotImage;
 let pigImage;
 let glassImage;
+let mousePic;
 
 let objectArray = [];
 
@@ -25,6 +26,7 @@ function preload() {
   slingshotImage = loadImage('images/slinger.png')
   pigImage = loadImage('images/pig.png');
   glassImage = loadImage('images/glass.png');
+  mousePic = loadImage('images/mouse.png');
 }
 
 function setup() {
@@ -76,6 +78,12 @@ function mouseReleased() {
 }
 
 function draw() {
+
+  cursor("images/cursorc.cur");
+  if (mouseIsPressed) {
+    cursor("images/mcursor.cur");
+  }
+  
   background(backgroundImage);
   Matter.Engine.update(engine);
   ground.show();
@@ -93,3 +101,4 @@ function draw() {
   bird.show();
   pig.show();
 }
+

@@ -62,7 +62,6 @@ function setup() {
   slingshot = new SlingShot(200, 520, bird.body);
   pig = new Piggy(1000, 610, 30);
 
-
   const mouse = Mouse.create(theCanvas.elt);
   const options = {
     mouse: mouse
@@ -118,13 +117,17 @@ function draw() {
   pig.show();
   objectArray.push(pig);
 
+ console.log(mouseX, mouseY);
+
+
   if (objectArray[0].body.positionImpulse.y !== 0) {
     World.remove(world, objectArray[0].body);
     textSize(40);
+    stroke("white");
+    strokeWeight(1);
     fill("red");
     text("You WIN!!!", width/2, height/2);
     pigAlive = false;
-    Matter.Engine.stop();
   }
 }
 

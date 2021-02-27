@@ -17,6 +17,8 @@ let pigImage;
 let glassImage;
 let mousePic;
 
+let isPigDead = false;
+
 let objectArray = [];
 
 function preload() {
@@ -100,5 +102,13 @@ function draw() {
   image(slingshotImage, 170, 500, 70, 160);
   bird.show();
   pig.show();
+  objectArray.push(pig);
+
+  if (objectArray[0].body.positionImpulse.y !== 0) {
+    World.remove(world, objectArray[0].body);
+    textSize(40);
+    fill("red");
+    text("You WIN!!!", width/2, height/2);
+  }
 }
 

@@ -1,8 +1,8 @@
-
 class Box {
   constructor(x, y, w, h) {
     const options = {
-    }
+      restitution: 0.5
+    };
     this.body = Matter.Bodies.rectangle(x, y, w, h, options);
     Matter.World.add(world, this.body);
     this.w = w;
@@ -18,7 +18,7 @@ class Box {
     fill(255);
     rectMode(CENTER);
     imageMode(CENTER);
-    image(boxImage, 0, 0, this.w, this.h);
+    image(blockImage, 0, 0, this.w, this.h);
     pop();
   }
 }

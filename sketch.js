@@ -11,6 +11,7 @@ let birdImage;
 let blockImage;
 let backgroundImage;
 let slingshotImage;
+let pigImage;
 
 let objectArray = [];
 
@@ -19,6 +20,7 @@ function preload() {
   blockImage = loadImage('images/boxy.png');
   backgroundImage = loadImage('images/bg.jpg');
   slingshotImage = loadImage('images/slinger.png')
+  pigImage = loadImage('images/pig.png');
 }
 
 function setup() {
@@ -32,6 +34,7 @@ function setup() {
   bird = new Bird(200, 520, 25);
 
   slingshot = new SlingShot(200, 520, bird.body);
+  pig = new Piggy(500, 200, 40);
 
 
   const mouse = Mouse.create(theCanvas.elt);
@@ -71,5 +74,6 @@ function draw() {
   slingshot.show();
   image(slingshotImage, 170, 500, 70, 160);
   bird.show();
+  pig.show();
 
 }

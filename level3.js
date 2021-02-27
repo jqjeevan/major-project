@@ -4,9 +4,9 @@ const L3BOXS1 = [];
 const L3BOXS2 = [];
 const L3BOXS3 = [];
 const L3BOXS4 = [];
-const L3GLASS1 = [];
-let L3GLASS2;
-let L3GLASS3;
+const L3Stone1 = [];
+let L3Stone2;
+let L3Stone3;
 
 
 function level3() {
@@ -32,10 +32,10 @@ function level3() {
             L3BOXS4[i] = new Box(1211, 400, 60, 60);
           }
         for (let i = 0; i < 2; i++) {
-            L3GLASS1[i] = new Glass(1000, 350, 360, 40);
+            L3Stone1[i] = new Stone(1000, 350, 360, 40);
           }
-        L3GLASS2 = new Glass(743, 400, 30, 300);
-        L3GLASS3 = new Glass(1258, 400, 30, 300);
+        L3Stone2 = new Stone(743, 400, 30, 300);
+        L3Stone3 = new Stone(1258, 400, 30, 300);
 
           
     }
@@ -55,11 +55,11 @@ function showLevel3() {
     for (let box of L3BOXS4) {
         box.show();
       }
-    for (let glass of L3GLASS1) {
-        glass.show();
+    for (let Stone of L3Stone1) {
+        Stone.show();
       }
-    L3GLASS2.show();
-    L3GLASS3.show();
+    L3Stone2.show();
+    L3Stone3.show();
     
 
     slingshot.show();

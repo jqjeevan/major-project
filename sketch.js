@@ -12,8 +12,7 @@ let blockImage;
 let backgroundImage;
 let slingshotImage;
 let pigImage;
-let glassImage;
-let mousePic;
+let StoneImage;
 
 let isPigDead = false;
 
@@ -25,7 +24,7 @@ function preload() {
   backgroundImage = loadImage('images/bg.jpg');
   slingshotImage = loadImage('images/slinger.png')
   pigImage = loadImage('images/pig.png');
-  glassImage = loadImage('images/glass.png');
+  StoneImage = loadImage('images/stone.png');
   mousePic = loadImage('images/mouse.png');
 }
 
@@ -48,7 +47,7 @@ function setup() {
 }
 
 function keyPressed() {
-  if (key === 'r') {
+  if (key === ' ') {
     World.remove(world, bird.body);
     bird = new Bird(200, 560, 20);
     slingshot.attach(bird.body);
@@ -75,6 +74,6 @@ function draw() {
   // level2();
   level3();
 
-  console.log(mouseX, mouseY); 
+  // console.log(mouseX, mouseY); 
 }
 

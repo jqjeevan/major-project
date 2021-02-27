@@ -2,7 +2,7 @@ let levelPlay1 = true;
 
 const L1BOXS1 = [];
 const L1BOXS2 = [];
-const L1GLASS1 = [];
+const L1Stone1 = [];
 
 function level1() {
 
@@ -21,7 +21,7 @@ function level1() {
           }
 
         for (let i = 0; i < 1; i++) {
-            GLASS1[i] = new Glass(1000, 350, 360, 40);
+            L1Stone1[i] = new Stone(1000, 350, 360, 40);
           }
     }
     showLevel1();
@@ -34,8 +34,8 @@ function showLevel1() {
     for (let box of L1BOXS2) {
         box.show();
       }
-    for (let glass of L1GLASS1) {
-        glass.show();
+    for (let Stone of L1Stone1) {
+        Stone.show();
       }
 
     slingshot.show();

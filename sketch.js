@@ -34,7 +34,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  ground = new Ground(width / 2, height/1.13, width, 20);
+  ground = new Ground(width / 2, 694, width, 80);
 
   const mouse = Mouse.create(theCanvas.elt);
   const options = {
@@ -62,17 +62,17 @@ function mouseReleased() {
 
 function draw() {
 
-  cursor("images/cursorc.cur");
+  cursor("cursors/cursorc.cur");
   if (mouseIsPressed) {
-    cursor("images/mcursor.cur");
+    cursor("cursors/mcursor.cur");
   }
   
   background(backgroundImage);
   Matter.Engine.update(engine);
 
-  // level1();
+  level1();
   // level2();
-  level3();
+  // level3();
 
   // console.log(mouseX, mouseY); 
 }

@@ -13,10 +13,10 @@ function level1() {
         slingshot = new SlingShot(200, 520, bird.body);
         pig = new Piggy(1000, 610, 30);
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 2; i++) {
             L1BOXS1[i] = new Box(850, 400, 60, 60);
           }
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 2; i++) {
             L1BOXS2[i] = new Box(1150, 400, 60, 60);
           }
 

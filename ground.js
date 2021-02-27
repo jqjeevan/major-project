@@ -13,6 +13,7 @@ class Ground extends Box {
     rotate(angle);
     noStroke();
     fill(30, 60, 20, 0);
+    fill("black");
     rectMode(CENTER);
     rect(0, 0, this.w, this.h);
     pop();

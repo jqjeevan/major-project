@@ -24,17 +24,21 @@ function preload() {
 }
 
 function setup() {
-  const theCanvas = createCanvas(windowWidth, windowHeight);
+  const theCanvas = createCanvas(1400, 750);
+
   engine = Engine.create();
   world = engine.world;
+
   ground = new Ground(width / 2, height/1.13, width, 20);
-  for (let i = 0; i < 4; i++) {
+
+  for (let i = 0; i < 3; i++) {
     BOXS[i] = new Box(windowWidth/1.2, 300 - i * 75, 100, 100);
   }
+
   bird = new Bird(200, 520, 25);
 
   slingshot = new SlingShot(200, 520, bird.body);
-  pig = new Piggy(500, 200, 40);
+  pig = new Piggy(800, 610, 40);
 
 
   const mouse = Mouse.create(theCanvas.elt);

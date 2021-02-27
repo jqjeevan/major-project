@@ -2,8 +2,7 @@
 class Bird {
   constructor(x, y, r) {
     const options = {
-      // restitution: 0.5
-    };
+    }
     this.body = Matter.Bodies.circle(x, y, r, options);
     Matter.Body.setMass(this.body, this.body.mass * 4);
     Matter.World.add(world, this.body);

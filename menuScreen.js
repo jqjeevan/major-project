@@ -14,11 +14,11 @@ function menuScreen() {
     gameSound.stop();
     startSound.loop();
     menuPlay = false;
-
   }
     background(menuBackground);
     image(infoImage, 1260, 150, 90, 90);
     image(birdImage, 1270, 550, 90, 90);
+    image(angryBirdText, width/4, 100, 800, 150);
     
     image(level1icon, 500, screenHeight/2, 150, 150);
     image(level2icon, screenWidth/2, screenHeight/2, 150, 150);

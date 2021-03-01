@@ -18,6 +18,7 @@ let unmuteImage;
 let infoImage;
 let infoSheet;
 let winMenu;
+let angryBirdText;
 
 let redBird;
 let blueBird;
@@ -48,6 +49,7 @@ function preload() {
     infoImage = loadImage('images/info.png');
     infoSheet = loadImage('images/infosheet.png');
     winMenu = loadImage('images/winer.png');
+    angryBirdText = loadImage('images/text.png');
 
     startSound = loadSound('sounds/loadscreensound.wav');
     gameSound = loadSound('sounds/gamesound.mp3');

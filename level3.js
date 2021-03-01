@@ -45,8 +45,8 @@ background(level3bg);
         for (let i = 0; i < 2; i++) {
             L3Stone1[i] = new Stone(1000, 350, 360, 40);
           }
-        L3Stone2 = new Stone(743, 400, 30, 300);
-        L3Stone3 = new Stone(1258, 400, 30, 300);
+        L3Stone2 = new Stone(733, 400, 50, 240);
+        L3Stone3 = new Stone(1268, 400, 50, 240);
           
     }
     showLevel3();

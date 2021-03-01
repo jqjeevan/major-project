@@ -28,6 +28,10 @@ let blackBird;
 let startSound;
 let gameSound;
 let endSound;
+let levelSelect;
+let victorySound;
+let clickSound;
+let birdClickSound;
 
 function preload() {
 
@@ -51,9 +55,13 @@ function preload() {
     winMenu = loadImage('images/winer.png');
     angryBirdText = loadImage('images/text.png');
 
-    startSound = loadSound('sounds/loadscreensound.wav');
+    startSound = loadSound('sounds/loadscreensound.mp3');
     gameSound = loadSound('sounds/gamesound.mp3');
     endSound = loadSound('sounds/endgamesound.mp3');
+    levelSelect = loadSound('sounds/levelselect.mp3');
+    victorySound = loadSound('sounds/winsong.mp3');
+    clickSound = loadSound('sounds/click.wav');
+    birdClickSound = loadSound('sounds/birdclick.mp3');
 
     redBird = loadImage('images/birdred.png');
     yellowBird = loadImage('images/birdyellow.png');

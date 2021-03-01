@@ -2,10 +2,10 @@
 class Stone {
   constructor(x, y, w, h) {
     const options = {
-      restitution: -0.1
+      restitution: 0
     };
     this.body = Matter.Bodies.rectangle(x, y, w, h, options);
-    this.body.friction = 0.1;
+    this.body.friction = 0.8;
     Matter.Body.setMass(this.body, this.body.mass * 2);
     Matter.World.add(world, this.body);
     this.w = w;

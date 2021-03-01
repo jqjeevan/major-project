@@ -10,7 +10,6 @@ let menuPlay = true;
 
 function menuScreen() {
   if (menuPlay === true){
-    console.log(birdImage);
     gameSound.stop();
     startSound.loop();
     menuPlay = false;

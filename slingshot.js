@@ -1,5 +1,8 @@
+// Creates class for the slingshot object
 class SlingShot {
   constructor(x, y, body) {
+
+    // Sets object property values such as stiffness and positioning of sling
     const options = {
       pointA: {
         x: x,
@@ -9,16 +12,20 @@ class SlingShot {
       stiffness: 0.02,
       length: 40
     };
+
+    // Creates contraint and adds object to world
     this.sling = Constraint.create(options);
     World.add(world, this.sling);
   }
 
+  // Bird can only can be released if the bird is released behind the slingshot
   fly() {
     if (mouseX<=145 && mouseY>=345){
       this.sling.bodyB = null;
     }
   }
 
+  // Shows the slingshot (sling) lines
   show() {
     if (this.sling.bodyB) {
       stroke(36, 24, 4);
@@ -30,6 +37,7 @@ class SlingShot {
     }
   }
 
+  // Attaches bird body to slingshot contraint
   attach(body) {
     this.sling.bodyB = body;
   }

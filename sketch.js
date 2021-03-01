@@ -5,7 +5,6 @@ let bird;
 let world, engine;
 let mConstraint;
 let slingshot;
-let isPigDead = false;
 let objectArray = [];
 
 let whichScreen = "menu";
@@ -17,35 +16,19 @@ let screenHeight = 750;
 function setup() {
   const theCanvas = createCanvas(screenWidth, screenHeight);
 
-  if (whichScreen === "menu"){
-    startSound.loop();
-  }
+  // startSound.loop();
 
   engine = Engine.create();
   world = engine.world;
 }
 
-function keyPressed() {
-  if (key === ' ') {
-    World.remove(world, bird.body);
-    bird = new Bird(200, 560, 20);
-    slingshot.attach(bird.body);
-  }
-}
-
-function mouseReleased() {
-  if (whichScreen === "level1" || whichScreen === "level2" || whichScreen === "level3"){
-    setTimeout(() => {
-      slingshot.fly();
-    }, 100);
-  }
-}
-
 function draw() {
+
   cursor("cursors/cursorc.cur");
   if (mouseIsPressed) {
     cursor("cursors/mcursor.cur");
   }
+
   Matter.Engine.update(engine);
 
   screenSwitch(); 
@@ -53,11 +36,11 @@ function draw() {
   if (isMuted){
     isMutedButton = image(unmuteImage, 1270, 40, 80, 80);
     masterVolume(0.0, 0.15);
-}
-else if (!isMuted) {
+  }
+  else if (!isMuted) {
     isMutedButton = image(muteImage, 1270, 40, 80, 80);
     masterVolume(1.0, 0.15);
-}
+  }
 }
 
 function screenSwitch(){
@@ -74,4 +57,20 @@ function screenSwitch(){
   else if (whichScreen === "level3"){
     level3();
   } 
+}
+
+function keyPressed() {
+  if (key === ' ') {
+    World.remove(world, bird.body);
+    bird = new Bird(200, 560, 20);
+    slingshot.attach(bird.body);
+  }
+}
+
+function mouseReleased() {
+  if (whichScreen === "level1" || whichScreen === "level2" || whichScreen === "level3"){
+    setTimeout(() => {
+      slingshot.fly();
+    }, 100);
+  }
 }

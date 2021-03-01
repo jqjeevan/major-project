@@ -8,13 +8,8 @@ const L3Stone1 = [];
 let L3Stone2;
 let L3Stone3;
 
-
 function level3() {
-pigAlive = true;
-  if (!pigAlive) {
-    image(winMenu, 400, 100);
-  }
-  
+
 background(level3bg);
 
     if (levelPlay3 === true) {
@@ -27,15 +22,12 @@ background(level3bg);
       mConstraint = MouseConstraint.create(engine, options);
       World.add(world, mConstraint);
   
-
-        levelPlay3 = false;
         gameSound.loop();
+        levelPlay3 = false;
+
         ground = new Ground(width / 2, 694, width, 80);
-
         bird = new Bird(200, 520, 20);
-
         slingshot = new SlingShot(200, 520, bird.body);
-
         pig = new Piggy(1000, 610, 30);
 
         for (let i = 0; i < 3; i++) {
@@ -55,7 +47,6 @@ background(level3bg);
           }
         L3Stone2 = new Stone(743, 400, 30, 300);
         L3Stone3 = new Stone(1258, 400, 30, 300);
-
           
     }
     showLevel3();
@@ -90,17 +81,5 @@ function showLevel3() {
     pig.show();
     objectArray.push(pig);
 
-    if (objectArray[0].body.positionImpulse.y !== 0) {
-      World.remove(world, objectArray[0].body);
-      World.clear(engine.world);
-        textSize(40);
-        stroke("white");
-        strokeWeight(1);
-        fill("red");
-        pigAlive = false;
-        if (!pigAlive) {
-          image(winMenu, 400, 100);
-        }
-    }
-    
+    pigCheck();
 }

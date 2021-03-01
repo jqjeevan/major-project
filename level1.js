@@ -4,12 +4,12 @@ const L1BOXS1 = [];
 const L1BOXS2 = [];
 const L1Stone1 = [];
 
+let winnerScreen;
+
 function level1() {
 
   background(level2bg);
-    if (!pigAlive) {
-      image(winMenu, 400, 100);
-    }
+
     if (levelPlay1 === true) {
       const theCanvas = createCanvas(screenWidth, screenHeight);
       const mouse = Mouse.create(theCanvas.elt);
@@ -22,10 +22,9 @@ function level1() {
 
 
         gameSound.loop();
-        levelPlay1 = false
+        levelPlay1 = false;
 
         ground = new Ground(width / 2, 694, width, 80);
-
         bird = new Bird(200, 520, 20);
         slingshot = new SlingShot(200, 520, bird.body);
         pig = new Piggy(1000, 610, 30);
@@ -45,6 +44,7 @@ function level1() {
 }
 
 function showLevel1() {
+
     for (let box of L1BOXS1) {
         box.show();
       }
@@ -64,13 +64,6 @@ function showLevel1() {
     pig.show();
     objectArray.push(pig);
 
-    if (objectArray[0].body.positionImpulse.y !== 0) {
-        World.remove(world, objectArray[0].body);
-        World.clear(engine.world);
-        textSize(40);
-        stroke("white");
-        strokeWeight(1);
-        fill("red");
-        pigAlive = false;
-    }
+    pigCheck();
+
 }

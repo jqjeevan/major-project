@@ -6,9 +6,16 @@ let button3;
 let muteButton;
 let infoOn = false;
 
-function menuScreen() {
-    background(menuBackground);
+let menuPlay = true;
 
+function menuScreen() {
+  if (menuPlay === true){
+    gameSound.stop();
+    startSound.loop();
+    menuPlay = false;
+
+  }
+    background(menuBackground);
     image(infoImage, 1260, 150, 90, 90);
     
     image(level1icon, 500, screenHeight/2, 150, 150);

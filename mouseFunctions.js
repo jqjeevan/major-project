@@ -24,13 +24,14 @@ function mousePressed(){
       whichScreen = "level3"
     }
   }
-  console.log(pigAlive);
 
   if (whichScreen === "level1" || whichScreen === "level2" || whichScreen === "level3"){
     if (!pigAlive){
       if (mouseX >= 752 && mouseX <= 852 && mouseY >= 352 && mouseY <= 454){
         whichScreen = "menu";
+        pigAlive = true;
       }
   }
   }
+  console.log(pigAlive);
 }

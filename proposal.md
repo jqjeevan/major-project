@@ -4,7 +4,7 @@
 
 ## Needs To Have
 
-~- Functioning gravity~
+- Functioning gravity
 - Functions/different js files for each part, having thir own class so it can be used across the files
 - A final target/ objective to the game
 - Background music and sounds for different objects
@@ -12,7 +12,7 @@
 - Configure level(s) with boxes setup properly
 
 ## Nice To Have
-- An ending screen
+- A victory screen
 - Add different masses to the objects
 - Add different levels
 - Have special powers (adding speed, mass, explosion ablility)

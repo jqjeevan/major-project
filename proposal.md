@@ -7,7 +7,7 @@
 - Functioning gravity
 - Functions/different js files for each part, having thir own class so it can be used across the files
 - A final target/ objective to the game
-- Background music and sounds for different objects
+- Background music and sounds 
 - Using Matter js to be able to kill pig with force
 - Configure level(s) with boxes setup properly
 

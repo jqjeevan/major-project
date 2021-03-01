@@ -1,3 +1,14 @@
+// CS30 Final Project - Angry Birds Clone
+// Jeevan Prakash
+// February 28, 2021
+
+// Extra for Experts:
+// - Added levels and new worlds for each level
+// - Ability to choose bird
+// - Custom cursor
+
+// Audio sourced from opengameart.org
+
 // Adds 'Matter' to the following variables making code cleaner
 const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
 

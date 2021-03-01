@@ -18,6 +18,7 @@ class Box {
 
   // displays box and image can rotate based on the body position
   show() {
+    
     // Only displays when the pig object is alive
     if (pigAlive) {
       const pos = this.body.position;

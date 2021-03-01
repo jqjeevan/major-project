@@ -14,7 +14,7 @@ class SlingShot {
   }
 
   fly() {
-    if (mouseX<=170 && mouseY>=345 && mouseY<=650){
+    if (mouseX<=145 && mouseY>=345){
       this.sling.bodyB = null;
     }
   }

@@ -22,7 +22,7 @@ class Stone {
       fill(255);
       rectMode(CENTER);
       imageMode(CENTER);
-      image(StoneImage, 0, 0, this.w, this.h);
+      image(stoneImage, 0, 0, this.w, this.h);
       pop();
     }
   }

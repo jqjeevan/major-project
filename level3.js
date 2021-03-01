@@ -10,8 +10,12 @@ let L3Stone3;
 
 
 function level3() {
+
+background(level3bg);
+
     if (levelPlay3 === true) {
         levelPlay3 = false;
+        gameSound.loop();
 
         bird = new Bird(200, 520, 20);
 

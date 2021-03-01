@@ -6,7 +6,10 @@ const L1Stone1 = [];
 
 function level1() {
 
+  background(level2bg);
+
     if (levelPlay1 === true) {
+        gameSound.loop();
         levelPlay1 = false;
 
         bird = new Bird(200, 520, 20);
@@ -28,6 +31,7 @@ function level1() {
 }
 
 function showLevel1() {
+
     for (let box of L1BOXS1) {
         box.show();
       }

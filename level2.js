@@ -7,8 +7,12 @@ const L2BOXS4 = [];
 const L2Stone1 = [];
 
 function level2() {
+
+  background(level2bg);
+
     if (levelPlay2 === true) {
         levelPlay2 = false;
+        gameSound.loop();
 
         bird = new Bird(200, 520, 20);
 

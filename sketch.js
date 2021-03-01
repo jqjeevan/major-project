@@ -1,35 +1,20 @@
 const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
 
 let ground;
-
 let bird;
 let world, engine;
 let mConstraint;
 let slingshot;
-
-let birdImage;
-let blockImage;
-let backgroundImage;
-let slingshotImage;
-let pigImage;
-let StoneImage;
-
 let isPigDead = false;
-
 let objectArray = [];
 
-function preload() {
-  birdImage = loadImage('images/bird.png');
-  blockImage = loadImage('images/boxy.png');
-  backgroundImage = loadImage('images/bg.jpg');
-  slingshotImage = loadImage('images/slinger.png')
-  pigImage = loadImage('images/pig.png');
-  StoneImage = loadImage('images/stone.png');
-  mousePic = loadImage('images/mouse.png');
-}
+let whichScreen = "menu";
+
+let screenWidth = 1400;
+let screenHeight = 750;
 
 function setup() {
-  const theCanvas = createCanvas(1400, 750);
+  const theCanvas = createCanvas(screenWidth, screenHeight);
 
   engine = Engine.create();
   world = engine.world;
@@ -40,7 +25,6 @@ function setup() {
   const options = {
     mouse: mouse
   };
-
   mouse.pixelRatio = pixelDensity();
   mConstraint = MouseConstraint.create(engine, options);
   World.add(world, mConstraint);
@@ -52,6 +36,8 @@ function keyPressed() {
     bird = new Bird(200, 560, 20);
     slingshot.attach(bird.body);
   }
+
+  whichScreen = "level1";
 }
 
 function mouseReleased() {
@@ -61,17 +47,15 @@ function mouseReleased() {
 }
 
 function draw() {
-
   cursor("cursors/cursorc.cur");
   if (mouseIsPressed) {
     cursor("cursors/mcursor.cur");
   }
-  
-  background(backgroundImage);
   Matter.Engine.update(engine);
 
-  level1();
-  // level2();
+  // menuScreen();
+  // level1();
+  level2();
   // level3();
 
   // console.log(mouseX, mouseY); 

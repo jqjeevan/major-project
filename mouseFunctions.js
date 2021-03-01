@@ -9,8 +9,8 @@ function mousePressed(){
       }
   }
 
-
   if (whichScreen === "menu"){
+    gameSound.stop();
     if (mouseX >= 502 && mouseX <= 644 && mouseY >= 378 && mouseY <= 519){
       startSound.stop();
       whichScreen = "level1"
@@ -24,14 +24,13 @@ function mousePressed(){
       whichScreen = "level3"
     }
   }
-  if (whichScreen === "menu"){
-    gameSound.stop();
-  }
-  console.log(mouseX, mouseY);
-}
+  console.log(pigAlive);
 
-function infoScreen(){
-    if (mouseX >= 1261 && mouseX <= 1345 && mouseY >= 151 && mouseY <= 235) {
-        image(infoSheet, 0, 0);
-    }
+  if (whichScreen === "level1" || whichScreen === "level2" || whichScreen === "level3"){
+    if (!pigAlive){
+      if (mouseX >= 752 && mouseX <= 852 && mouseY >= 352 && mouseY <= 454){
+        whichScreen = "menu";
+      }
+  }
+  }
 }

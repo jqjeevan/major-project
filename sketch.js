@@ -9,6 +9,7 @@ let isPigDead = false;
 let objectArray = [];
 
 let whichScreen = "menu";
+let pigAlive = true;
 
 let screenWidth = 1400;
 let screenHeight = 750;
@@ -22,16 +23,6 @@ function setup() {
 
   engine = Engine.create();
   world = engine.world;
-
-  ground = new Ground(width / 2, 694, width, 80);
-
-  const mouse = Mouse.create(theCanvas.elt);
-  const options = {
-    mouse: mouse
-  };
-  mouse.pixelRatio = pixelDensity();
-  mConstraint = MouseConstraint.create(engine, options);
-  World.add(world, mConstraint);
 }
 
 function keyPressed() {
@@ -61,16 +52,17 @@ function draw() {
 
   if (isMuted){
     isMutedButton = image(unmuteImage, 1270, 40, 80, 80);
-    masterVolume(0.0);
+    masterVolume(0.0, 0.15);
 }
 else if (!isMuted) {
     isMutedButton = image(muteImage, 1270, 40, 80, 80);
-    masterVolume(1.0);
+    masterVolume(1.0, 0.15);
 }
 }
 
 function screenSwitch(){
   if (whichScreen === "menu"){
+    pigAlive = true;
     menuScreen();
   }
   else if (whichScreen === "level1"){

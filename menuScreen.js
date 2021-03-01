@@ -6,8 +6,6 @@ let button3;
 let muteButton;
 let infoOn = false;
 
-infoOn = false;
-
 function menuScreen() {
     background(menuBackground);
 
@@ -17,4 +15,7 @@ function menuScreen() {
     image(level2icon, screenWidth/2, screenHeight/2, 150, 150);
     image(level3icon, 900, screenHeight/2, 150, 150);
 
+    if (mouseX >= 1261 && mouseX <= 1345 && mouseY >= 151 && mouseY <= 235) {
+        image(infoSheet, 350, 100, 800, 500);
+      } 
 }

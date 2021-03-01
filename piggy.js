@@ -1,4 +1,4 @@
-let pigAlive = true;
+
 class Piggy {
   constructor(x, y, r) {
     const options = {

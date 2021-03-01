@@ -17,6 +17,7 @@ let muteImage;
 let unmuteImage;
 let infoImage;
 let infoSheet;
+let winMenu;
 
 let startSound;
 let gameSound;
@@ -42,6 +43,7 @@ function preload() {
     unmuteImage = loadImage('images/unmute.png');
     infoImage = loadImage('images/info.png');
     infoSheet = loadImage('images/infosheet.png');
+    winMenu = loadImage('images/winer.png');
 
     startSound = loadSound('sounds/loadscreensound.wav');
     gameSound = loadSound('sounds/gamesound.mp3');

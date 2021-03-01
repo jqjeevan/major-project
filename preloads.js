@@ -15,6 +15,8 @@ let level3icon;
 
 let muteImage;
 let unmuteImage;
+let infoImage;
+let infoSheet;
 
 let startSound;
 let gameSound;
@@ -38,6 +40,8 @@ function preload() {
 
     muteImage = loadImage('images/mute.png');
     unmuteImage = loadImage('images/unmute.png');
+    infoImage = loadImage('images/info.png');
+    infoSheet = loadImage('images/infosheet.png');
 
     startSound = loadSound('sounds/loadscreensound.wav');
     gameSound = loadSound('sounds/gamesound.mp3');

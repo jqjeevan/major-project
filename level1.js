@@ -58,6 +58,7 @@ function showLevel1() {
         strokeWeight(1);
         fill("red");
         text("You WIN!!!", width/2, height/2);
+        infoScreen();
         pigAlive = false;
     }
     

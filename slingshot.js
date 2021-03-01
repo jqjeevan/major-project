@@ -20,7 +20,7 @@ class SlingShot {
 
   // Bird can only can be released if the bird is released behind the slingshot
   fly() {
-    if (mouseX<=145 && mouseY>=345){
+    if (mouseX<=180 && mouseY>=345){
       this.sling.bodyB = null;
     }
   }

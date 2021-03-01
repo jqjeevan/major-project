@@ -35,6 +35,9 @@ function setup() {
 
 function draw() {
 
+  // Checks for whichScreen variable which allows level selection
+  screenSwitch(); 
+
   // Custom cursor for game and changes while mouse is pressed
   cursor("cursors/cursorc.cur");
   if (mouseIsPressed) {
@@ -43,9 +46,6 @@ function draw() {
 
   // Updates/runs the matter js engine
   Matter.Engine.update(engine);
-
-  // Checks for whichScreen variable which allows level selection
-  screenSwitch(); 
 
   // If mute button is pressed, isMuted variable changes master volume of code
   if (isMuted){

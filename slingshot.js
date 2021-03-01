@@ -10,7 +10,7 @@ class SlingShot {
       },
       bodyB: body,
       stiffness: 0.02,
-      length: 40
+      length: 15
     };
 
     // Creates contraint and adds object to world

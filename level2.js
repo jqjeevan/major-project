@@ -27,10 +27,10 @@ function level2() {
             L2BOXS2[i] = new Box(1150, 400, 60, 60);
           }
         for (let i = 0; i < 5; i++) {
-            L2BOXS3[i] = new Box(789, 400, 60, 60);
+            L2BOXS3[i] = new Box(789, 300, 60, 60);
           }
         for (let i = 0; i < 5; i++) {
-            L2BOXS4[i] = new Box(1211, 400, 60, 60);
+            L2BOXS4[i] = new Box(1211, 300, 60, 60);
           }
         for (let i = 0; i < 2; i++) {
             L2Stone1[i] = new Stone(1000, 350, 360, 40);

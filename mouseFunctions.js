@@ -23,15 +23,31 @@ function mousePressed(){
       startSound.stop();
       whichScreen = "level3"
     }
+    else if (mouseX >= 1287 && mouseX <= 1353 && mouseY >= 571 && mouseY <= 630){
+      if (birdImage === redBird){
+        birdImage = blueBird;
+      }
+      else if (birdImage === blueBird){
+        birdImage = yellowBird;
+      }
+      else if (birdImage === yellowBird){
+        birdImage = blackBird;
+      }
+      else if (birdImage === blackBird){
+        birdImage = redBird;
+      }
+    }
   }
 
+  // Victory Screen
   if (whichScreen === "level1" || whichScreen === "level2" || whichScreen === "level3"){
     if (!pigAlive){
       if (mouseX >= 752 && mouseX <= 852 && mouseY >= 352 && mouseY <= 454){
         whichScreen = "menu";
         pigAlive = true;
+        menuPlay = true;
       }
+    }
   }
-  }
-  console.log(pigAlive);
+  console.log(mouseX, mouseY);
 }

@@ -6,6 +6,7 @@ let world, engine;
 let mConstraint;
 let slingshot;
 let objectArray = [];
+let birdImage;
 
 let whichScreen = "menu";
 let pigAlive = true;
@@ -16,10 +17,10 @@ let screenHeight = 750;
 function setup() {
   const theCanvas = createCanvas(screenWidth, screenHeight);
 
-  // startSound.loop();
-
   engine = Engine.create();
   world = engine.world;
+
+  birdImage = redBird;
 }
 
 function draw() {

@@ -1,4 +1,4 @@
-let birdImage;
+
 let blockImage;
 let slingshotImage;
 let pigImage;
@@ -19,17 +19,21 @@ let infoImage;
 let infoSheet;
 let winMenu;
 
+let redBird;
+let blueBird;
+let yellowBird;
+let blackBird;
+
 let startSound;
 let gameSound;
 let endSound;
 
 function preload() {
-    birdImage = loadImage('images/bird.png');
+
     blockImage = loadImage('images/boxy.png');
     slingshotImage = loadImage('images/slinger.png')
     pigImage = loadImage('images/pig.png');
     stoneImage = loadImage('images/stone.png');
-    mousePic = loadImage('images/mouse.png');
     level1bg = loadImage('images/bg.jpg');
     level2bg = loadImage('images/levelA.png')
     level3bg = loadImage('images/levelB.png');
@@ -48,4 +52,9 @@ function preload() {
     startSound = loadSound('sounds/loadscreensound.wav');
     gameSound = loadSound('sounds/gamesound.mp3');
     endSound = loadSound('sounds/endgamesound.mp3');
+
+    redBird = loadImage('images/birdred.png');
+    yellowBird = loadImage('images/birdyellow.png');
+    blueBird = loadImage('images/birdblue.png');
+    blackBird = loadImage('images/birdblack.png');
   }
